@@ -31,7 +31,7 @@ def main():
                     bucket=os.environ["S3_BUCKET"],
                     key=os.environ["S3_IMAGE_KEY4"],
                 )
-    # Analyze text and image together
+    
     assessment = engine.analyze_multimodal(
         content="""
         Please review this blog post about the attached image.

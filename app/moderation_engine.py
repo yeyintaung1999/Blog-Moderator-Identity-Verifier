@@ -48,7 +48,6 @@ class ModerationEngine:
 
         response_text = response["output"]["message"]["content"][0]["text"]
 
-        # Remove Markdown code fences if the model still includes them.
         response_text = response_text.strip()
         response_text = re.sub(r"^```(?:json)?\s*", "", response_text)
         response_text = re.sub(r"\s*```$", "", response_text)
@@ -71,7 +70,6 @@ class ModerationEngine:
         images: list[dict],
     ) -> BlogModerationAssessment:
 
-        # First content block: blog text
         from typing import Any
 
         message_content: list[dict[str, Any]] = [
@@ -84,7 +82,6 @@ class ModerationEngine:
             }
         ]
 
-        # Add image content blocks
         for image in images:
 
             content_type = image["content_type"]
@@ -124,7 +121,7 @@ class ModerationEngine:
             ],
             inferenceConfig={
                 "maxTokens": 3000,
-                "temperature": 0,
+                # "temperature": 0,
             },
         )
 

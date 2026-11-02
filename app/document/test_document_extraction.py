@@ -16,7 +16,7 @@ def main():
     test_documents = [
         {
             "name": "RESIDENCE_CARD",
-            "front_key": os.environ["RESIDENCE_CARD_FRONT_KEY"],
+            "front_key": os.environ["BLUR_ZAIRYU"],
             "back_key": os.environ["RESIDENCE_CARD_BACK_KEY"],
         },
         # {

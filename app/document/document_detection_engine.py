@@ -87,7 +87,7 @@ class DocumentDetectionEngine:
             ],
             inferenceConfig={
                 "maxTokens": 3000,
-                "temperature": 0,
+                # "temperature": 0,
             },
         )
 
