@@ -45,7 +45,7 @@ def main():
 
             print(result.model_dump_json(indent=2))
 
-        except Exception as error:
+        except Exception as error: # noqa
             print(f"Extraction failed: {error}")
 
 
